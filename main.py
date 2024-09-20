@@ -16,7 +16,7 @@ warnings.filterwarnings("ignore")
 time_1 = t(3, 45)  # 9:17 AM IST -> 3:47 AM UTC
 time_2 = t(9, 50)  # 3:01 PM IST -> 9:31 AM UTC
 order = 0
-expiry = '2024-09-19'
+expiry = '2024-09-26'
 fut_expiry = '2024-09-26'
 
 SL = 5
