@@ -23,7 +23,7 @@ SL = 5
 
 while True:
     now = datetime.now()
-    if order == 0 and t(9, 35)<=t(datetime.now().time().hour, datetime.now().time().minute)<t(9, 46) and now.second == 0 :
+    if order == 0 and t(4, 05)<=t(datetime.now().time().hour, datetime.now().time().minute)<t(4, 06) and now.second == 0 :
         today = datetime.now().strftime("%Y-%m-%d")
         #yesterday = (datetime.now() - timedelta(days=5)).strftime("%Y-%m-%d")
         for j in range(0,5):
@@ -44,8 +44,8 @@ while True:
         olhc = data['Success']
         olhc = pd.DataFrame(olhc)
         olhc['datetime'] = pd.to_datetime(olhc['datetime'])
-        olhc = olhc[(olhc['datetime'].dt.time >= pd.to_datetime('09:15').time()) &
-                       (olhc['datetime'].dt.time <= pd.to_datetime('15:29').time())]
+        olhc = olhc[(olhc['datetime'].dt.time >= pd.to_datetime('03:45').time()) &
+                       (olhc['datetime'].dt.time <= pd.to_datetime('09:59').time())]
         
         candles_3 = olhc.iloc[-4:-1]
         resistance = candles_3['high'].max()
@@ -244,8 +244,8 @@ while True:
         olhc = data['Success']
         olhc = pd.DataFrame(olhc)
         olhc['datetime'] = pd.to_datetime(olhc['datetime'])
-        olhc = olhc[(olhc['datetime'].dt.time >= pd.to_datetime('09:15').time()) &
-                       (olhc['datetime'].dt.time <= pd.to_datetime('15:29').time())]
+        olhc = olhc[(olhc['datetime'].dt.time >= pd.to_datetime('03:45').time()) &
+                       (olhc['datetime'].dt.time <= pd.to_datetime('09:59').time())]
         
         candles_3 = olhc.iloc[-7:-1]
         resistance = candles_3['high'].max()
@@ -450,7 +450,7 @@ while True:
             initial_point = (entry_premium - leg_cmp)
             tsl = leg_cmp + SL
             
-        if (leg_cmp >= tsl) or (t(datetime.now().time().hour, datetime.now().time().minute) == t(15,20)) or pnl_per < -25 :
+        if (leg_cmp >= tsl) or (t(datetime.now().time().hour, datetime.now().time().minute) == t(9,50)) or pnl_per < -25 :
             order = 0
             exit_premium = -(leg_cmp)
             time = datetime.now().strftime('%H:%M:%S')
@@ -506,7 +506,7 @@ while True:
             initial_point = (entry_premium - leg1_cmp)
             tsl = leg1_cmp + SL
             
-        if (leg1_cmp >= tsl) or (t(datetime.now().time().hour, datetime.now().time().minute) == t(15,20)) or pnl_per < -25 :
+        if (leg1_cmp >= tsl) or (t(datetime.now().time().hour, datetime.now().time().minute) == t(9,50)) or pnl_per < -25 :
             order = 0
             exit_premium = -(leg1_cmp)
             time = datetime.now().strftime('%H:%M:%S')
