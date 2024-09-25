@@ -2,7 +2,7 @@ from breeze_connect import BreezeConnect
 import urllib
 breeze = BreezeConnect(api_key="77%U3I71634^099gN232777%316Q~v4=")
 breeze.generate_session(api_secret="9331K77(I8_52JG2K73$5438q95772j@",
-                        session_token="47492870")
+                        session_token="47547297")
 
 import numpy as np
 import pandas as pd
@@ -222,7 +222,7 @@ while True:
                         
                 
                 
-    if order == 0 and t(9, 46)<t(datetime.now().time().hour, datetime.now().time().minute)<t(15, 30) and now.second == 0 :
+    if order == 0 and t(9, 16)<t(datetime.now().time().hour, datetime.now().time().minute)<t(10, 0) and now.second == 0 :
         today = datetime.now().strftime("%Y-%m-%d")
         #yesterday = (datetime.now() - timedelta(days=5)).strftime("%Y-%m-%d")
 
@@ -476,13 +476,7 @@ while True:
             print('SL hits, 25% loss booked')
             
             
-            
-        
-        
-        
-        
-        
-                
+
                 
             
     if order == -1:
