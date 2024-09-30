@@ -23,7 +23,7 @@ SL = 5
 
 while True:
     now = datetime.now()
-    if order == 0 and t(4, 5)<=t(datetime.now().time().hour, datetime.now().time().minute)<t(4, 6) and now.second == 0 :
+    if order == 0 and t(4, 5)<=t(datetime.now().time().hour, datetime.now().time().minute)<t(4, 16) and now.second == 0 :
         today = datetime.now().strftime("%Y-%m-%d")
         #yesterday = (datetime.now() - timedelta(days=5)).strftime("%Y-%m-%d")
         for j in range(0,5):
