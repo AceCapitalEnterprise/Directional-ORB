@@ -45,7 +45,7 @@ while True:
         olhc = pd.DataFrame(olhc)
         olhc['datetime'] = pd.to_datetime(olhc['datetime'])
         olhc = olhc[(olhc['datetime'].dt.time >= pd.to_datetime('09:15').time()) &
-                       (olhc['datetime'].dt.time <= pd.to_datetime('03:29').time())]
+                       (olhc['datetime'].dt.time <= pd.to_datetime('15:29').time())]
         
         candles_3 = olhc.iloc[-4:-1]
         resistance = candles_3['high'].max()
