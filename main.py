@@ -44,8 +44,8 @@ while True:
         olhc = data['Success']
         olhc = pd.DataFrame(olhc)
         olhc['datetime'] = pd.to_datetime(olhc['datetime'])
-        olhc = olhc[(olhc['datetime'].dt.time >= pd.to_datetime('03:45').time()) &
-                       (olhc['datetime'].dt.time <= pd.to_datetime('09:59').time())]
+        olhc = olhc[(olhc['datetime'].dt.time >= pd.to_datetime('09:15').time()) &
+                       (olhc['datetime'].dt.time <= pd.to_datetime('03:29').time())]
         
         candles_3 = olhc.iloc[-4:-1]
         resistance = candles_3['high'].max()
@@ -222,7 +222,7 @@ while True:
                         
                 
                 
-    if order == 0 and t(9, 16)<t(datetime.now().time().hour, datetime.now().time().minute)<t(10, 0) and now.second == 0 :
+    if order == 0 and t(3, 46)<t(datetime.now().time().hour, datetime.now().time().minute)<t(10, 0) and now.second == 0 :
         today = datetime.now().strftime("%Y-%m-%d")
         #yesterday = (datetime.now() - timedelta(days=5)).strftime("%Y-%m-%d")
 
@@ -244,8 +244,8 @@ while True:
         olhc = data['Success']
         olhc = pd.DataFrame(olhc)
         olhc['datetime'] = pd.to_datetime(olhc['datetime'])
-        olhc = olhc[(olhc['datetime'].dt.time >= pd.to_datetime('03:45').time()) &
-                       (olhc['datetime'].dt.time <= pd.to_datetime('09:59').time())]
+        olhc = olhc[(olhc['datetime'].dt.time >= pd.to_datetime('09:15').time()) &
+                       (olhc['datetime'].dt.time <= pd.to_datetime('15:29').time())]
         
         candles_3 = olhc.iloc[-7:-1]
         resistance = candles_3['high'].max()
